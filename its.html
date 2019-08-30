@@ -1,0 +1,43 @@
+<html><head>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<style>
+html, body {width: 100%; height: 100%;margin: 0; overflow: hidden}
+.gax-center{position: relative; top: 50%; left: 50%; transform: translate(-50%,-50%);text-align:center}
+</style>
+</head>
+<body>
+
+<div class="gax-center">
+<script type="text/javascript">
+	var params = location.href.split('?')[1].split('&');
+	data = {};
+	for (x in params){
+		data[params[x].split('=')[0]] = params[x].split('=')[1];
+	}
+
+	wid = data["wid"];
+	zid = data["zid"];
+
+	var _ase  = _ase || [];
+	_ase.push([wid,zid]);
+	
+	div_id = "adseax_"+zid;
+
+	function checkHasBanner(){
+	  if (document.getElementById('AbdInpageMobileAd') == null  && document.getElementById(div_id) == null){
+			setTimeout("checkHasBanner();",500);	
+		}else{
+			parent.postMessage({func_type:'gaxShowInterscroller'},"*");
+	  }
+	};
+
+	window.addEventListener('load', function(){ // on page load
+		checkHasBanner();
+	}, false);
+</script>
+<script src="./its_files/ad-exchange.js.download" type="text/javascript"></script>
+</div>
+
+
+</body></html>

@@ -1,4 +1,4 @@
-var htmlString = '<body style="margin: 0 auto;overflow: hidden;text-align: center;margin-top:5px"><script type="text/javascript">var _ase  = _ase || [];_ase.push(["1536895172","1566207922"]);<\/script></body>';
+var htmlString = '<body style="margin: 0 auto;overflow: hidden;text-align: center;margin-top:5px"><script type="text/javascript">var _ase  = _ase || [];_ase.push(["1536895172","1566207922"]);<script src="https://gamma.cachefly.net/js/ad-exchange.js" type="text/javascript"></script><\/script></body>';
 var sHeight = screen.height, html = '';
 if (jQuery(window).width() > jQuery(window).height()) {
 	html = '<div id="ad_inpage_container" style="width: 100%; max-width: 100%; overflow: hidden; text-align: center; position: relative; visibility: visible; display: block; height: ' + sHeight + 'px; background: transparent;clip-path: inset(1px);-webkit-clip-path:inset(1px);margin-bottom: -1px;">' +
@@ -38,3 +38,5 @@ jQuery(window).scroll(function () {
 		}
 	}
 });
+
+
